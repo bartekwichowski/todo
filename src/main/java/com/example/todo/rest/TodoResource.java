@@ -42,5 +42,4 @@ public class TodoResource {
         todoService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
 }
