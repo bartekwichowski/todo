@@ -6,7 +6,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>backend</artifactId>
-    <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <dependencies>
         <dependency>
@@ -56,10 +55,9 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
+                <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
-                    <packagingExcludes>WEB-INF/lib/tomcat-*.jar</packagingExcludes>
-                    <warName>todo-app</warName>
+                    <finalName>todo-app</finalName>
                 </configuration>
             </plugin>
             <plugin>
