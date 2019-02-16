@@ -1,0 +1,13 @@
+<mat-card class="card" fxLayout="column" fxLayoutGap="32px">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Task {{todo?.id}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    {{todo?.task}}
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="back()">BACK</button>
+    <button mat-button>EDIT</button>
+  </mat-card-actions>
+</mat-card>
