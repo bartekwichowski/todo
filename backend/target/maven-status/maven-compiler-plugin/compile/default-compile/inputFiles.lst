@@ -1,0 +1,7 @@
+/home/bartek/IdeaProjects/todo/backend/src/main/java/com/example/todo/repository/TodoRepository.java
+/home/bartek/IdeaProjects/todo/backend/src/main/java/com/example/todo/service/TodoService.java
+/home/bartek/IdeaProjects/todo/backend/src/main/java/com/example/todo/mapper/TodoMapper.java
+/home/bartek/IdeaProjects/todo/backend/src/main/java/com/example/todo/TodoApplication.java
+/home/bartek/IdeaProjects/todo/backend/src/main/java/com/example/todo/rest/TodoResource.java
+/home/bartek/IdeaProjects/todo/backend/src/main/java/com/example/todo/dto/TodoDto.java
+/home/bartek/IdeaProjects/todo/backend/src/main/java/com/example/todo/model/Todo.java
