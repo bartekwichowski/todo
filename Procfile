@@ -1,1 +1,1 @@
-java -jar target/todo-app.jar
+web: java -jar target/todo-app.jar
