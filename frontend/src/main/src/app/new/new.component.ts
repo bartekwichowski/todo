@@ -18,8 +18,7 @@ export class NewComponent implements OnInit {
     
   }
 
-  create(value: string) {
-    this.todo.task = value;
+  create() {
     this.todoService.create(this.todo).subscribe(() => {});
     this.router.navigate(['']);
   }

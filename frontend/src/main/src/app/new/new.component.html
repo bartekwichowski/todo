@@ -2,8 +2,8 @@
 <div class="container">
   <form class="new-todo">
     <mat-form-field class="example-full-width">
-      <input #task matInput placeholder="What you wann'a do?" autocomplete="doNotAutoComplete">
+      <input name="task" matInput placeholder="What you wann'a do?" autocomplete="doNotAutoComplete" [(ngModel)]="todo.task">
     </mat-form-field>
-    <button mat-button color="secondy" (click)="create(task.value)">Submit</button>
+    <button  type="button" mat-button color="second" (click)="create()">Submit</button>
   </form>
 </div>
