@@ -123,18 +123,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _todo_todo_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./todo/todo.component */ "./src/app/todo/todo.component.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./todo-list/todo-list.component */ "./src/app/todo-list/todo-list.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _custom_material_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./custom-material.module */ "./src/app/custom-material.module.ts");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var _new_new_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./new/new.component */ "./src/app/new/new.component.ts");
-/* harmony import */ var _menu_bar_menu_bar_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./menu-bar/menu-bar.component */ "./src/app/menu-bar/menu-bar.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _todo_todo_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./todo/todo.component */ "./src/app/todo/todo.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./todo-list/todo-list.component */ "./src/app/todo-list/todo-list.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _custom_material_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./custom-material.module */ "./src/app/custom-material.module.ts");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _new_new_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./new/new.component */ "./src/app/new/new.component.ts");
+/* harmony import */ var _menu_bar_menu_bar_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./menu-bar/menu-bar.component */ "./src/app/menu-bar/menu-bar.component.ts");
+
 
 
 
@@ -156,37 +158,38 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _todo_todo_component__WEBPACK_IMPORTED_MODULE_5__["TodoComponent"],
-                _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_7__["TodoListComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
-                _new_new_component__WEBPACK_IMPORTED_MODULE_13__["NewComponent"],
-                _menu_bar_menu_bar_component__WEBPACK_IMPORTED_MODULE_14__["MenuBarComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _todo_todo_component__WEBPACK_IMPORTED_MODULE_6__["TodoComponent"],
+                _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_8__["TodoListComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
+                _new_new_component__WEBPACK_IMPORTED_MODULE_14__["NewComponent"],
+                _menu_bar_menu_bar_component__WEBPACK_IMPORTED_MODULE_15__["MenuBarComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["BrowserAnimationsModule"],
-                _custom_material_module__WEBPACK_IMPORTED_MODULE_11__["CustomMaterialModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_12__["FlexLayoutModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_9__["RouterModule"].forRoot([
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["BrowserAnimationsModule"],
+                _custom_material_module__WEBPACK_IMPORTED_MODULE_12__["CustomMaterialModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_13__["FlexLayoutModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_10__["RouterModule"].forRoot([
                     {
-                        component: _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
+                        component: _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
                         path: ''
                     },
                     {
-                        component: _todo_todo_component__WEBPACK_IMPORTED_MODULE_5__["TodoComponent"],
+                        component: _todo_todo_component__WEBPACK_IMPORTED_MODULE_6__["TodoComponent"],
                         path: 'todo/:id'
                     },
                     {
-                        component: _new_new_component__WEBPACK_IMPORTED_MODULE_13__["NewComponent"],
+                        component: _new_new_component__WEBPACK_IMPORTED_MODULE_14__["NewComponent"],
                         path: 'new'
                     }
                 ])
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -214,6 +217,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/divider */ "./node_modules/@angular/material/esm5/divider.es5.js");
 /* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm5/input.es5.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm5/icon.es5.js");
+
 
 
 
@@ -234,7 +239,8 @@ var CustomMaterialModule = /** @class */ (function () {
                 _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_4__["MatSidenavModule"],
                 _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__["MatToolbarModule"],
                 _angular_material_divider__WEBPACK_IMPORTED_MODULE_6__["MatDividerModule"],
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"]
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"],
+                _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIconModule"]
             ],
             exports: [
                 _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"],
@@ -243,7 +249,8 @@ var CustomMaterialModule = /** @class */ (function () {
                 _angular_material_sidenav__WEBPACK_IMPORTED_MODULE_4__["MatSidenavModule"],
                 _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_5__["MatToolbarModule"],
                 _angular_material_divider__WEBPACK_IMPORTED_MODULE_6__["MatDividerModule"],
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"]
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"],
+                _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIconModule"]
             ],
         })
     ], CustomMaterialModule);
@@ -261,7 +268,7 @@ var CustomMaterialModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".icon-bar {\n    position: fixed;\n    bottom: 2%;\n    right: 3%;\n    -webkit-transform: translateY(-50%);\n    transform: translateY(-50%);\n  }\n  \n  /* Style the icon bar links */\n  \n  .icon-bar a {\n    display: block;\n    text-align: center;\n    padding: 16px;\n    transition: all 0.3s ease;\n    color: white;\n    font-size: 1000px;\n  }\n  \n  /* Style the social media icons with color, if you want */\n  \n  .icon-bar a:hover {\n    background-color: rgb(223, 213, 213);\n  }\n  \n  .icon {\n    font-size: 5em;\n    position: fixed;\n    bottom: 2%;\n    right: 3%;\n}\n\n \n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxlQUFlO0lBQ2YsVUFBVTtJQUNWLFNBQVM7SUFDVCxtQ0FBbUM7SUFFbkMsMkJBQTJCO0VBQzdCOztFQUVBLDZCQUE2Qjs7RUFDN0I7SUFDRSxjQUFjO0lBQ2Qsa0JBQWtCO0lBQ2xCLGFBQWE7SUFDYix5QkFBeUI7SUFDekIsWUFBWTtJQUNaLGlCQUFpQjtFQUNuQjs7RUFFQSx5REFBeUQ7O0VBQ3pEO0lBQ0Usb0NBQW9DO0VBQ3RDOztFQUVBO0lBQ0UsY0FBYztJQUNkLGVBQWU7SUFDZixVQUFVO0lBQ1YsU0FBUztBQUNiIiwiZmlsZSI6InNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaWNvbi1iYXIge1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICBib3R0b206IDIlO1xuICAgIHJpZ2h0OiAzJTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbiAgICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01MCUpO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbiAgfVxuICBcbiAgLyogU3R5bGUgdGhlIGljb24gYmFyIGxpbmtzICovXG4gIC5pY29uLWJhciBhIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMTZweDtcbiAgICB0cmFuc2l0aW9uOiBhbGwgMC4zcyBlYXNlO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBmb250LXNpemU6IDEwMDBweDtcbiAgfVxuICBcbiAgLyogU3R5bGUgdGhlIHNvY2lhbCBtZWRpYSBpY29ucyB3aXRoIGNvbG9yLCBpZiB5b3Ugd2FudCAqL1xuICAuaWNvbi1iYXIgYTpob3ZlciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIyMywgMjEzLCAyMTMpO1xuICB9XG5cbiAgLmljb24ge1xuICAgIGZvbnQtc2l6ZTogNWVtO1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICBib3R0b206IDIlO1xuICAgIHJpZ2h0OiAzJTtcbn1cblxuICJdfQ== */"
 
 /***/ }),
 
@@ -272,7 +279,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<menu-bar></menu-bar>\n<todo-list></todo-list>\n<i class=\"material-icons fixed\" style=\"font-size: 50px; position: 200;\" (click)=\"addNew()\">add_circle</i>"
+module.exports = "<menu-bar></menu-bar>\n<todo-list></todo-list>\n<div class=\"icon\">\n        <mat-icon [inline]=\"true\" color=\"primary\" (click)=\"addNew()\">add_circle</mat-icon>\n</div>"
 
 /***/ }),
 
@@ -410,7 +417,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<menu-bar></menu-bar>\n<div class=\"container\">\n  <form class=\"new-todo\">\n    <mat-form-field class=\"example-full-width\">\n      <input matInput placeholder=\"What you wann'a do?\" autocomplete=\"doNotAutoComplete\" value={{todo.task}}>\n    </mat-form-field>\n    <button mat-button color=\"secondy\" (click)=\"create()\">Submit</button>\n  </form>\n</div>"
+module.exports = "<menu-bar></menu-bar>\n<div class=\"container\">\n  <form class=\"new-todo\">\n    <mat-form-field class=\"example-full-width\">\n      <input name=\"task\" matInput placeholder=\"What you wann'a do?\" autocomplete=\"doNotAutoComplete\" [(ngModel)]=\"todo.task\">\n    </mat-form-field>\n    <button  type=\"button\" mat-button color=\"second\" (click)=\"create()\">Submit</button>\n  </form>\n</div>"
 
 /***/ }),
 
