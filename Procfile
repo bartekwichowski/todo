@@ -1,1 +1,1 @@
-web: java -jar target/todo-app.jar
+web: java -Dserver.port=$PORT -jar $PATH_TO_JAR
