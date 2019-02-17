@@ -2,8 +2,8 @@
 <div class="container">
   <form class="new-todo">
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="What you wann'a do?" autocomplete="doNotAutoComplete" value={{todo.task}}>
+      <input #task matInput placeholder="What you wann'a do?" autocomplete="doNotAutoComplete">
     </mat-form-field>
-    <button mat-button color="secondy" (click)="create()">Submit</button>
+    <button mat-button color="secondy" (click)="create(task.value)">Submit</button>
   </form>
 </div>
