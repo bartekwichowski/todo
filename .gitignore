@@ -1,4 +1,5 @@
 /target/
+/backend/target/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
@@ -65,6 +66,52 @@ yarn-error.log
 # User specific bazel settings
 .bazelrc.user
 
+# Angular
+
 frontend/package-lock.json
-frontend/src/main/node/*
-frontend/target/*
+frontend/src/main/node/
+frontend/src/main/node-modules/
+frontend/target/
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
