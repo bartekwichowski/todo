@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +15,19 @@ import { CustomMaterialModule } from './custom-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NewComponent } from './new/new.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { MAT_DATE_LOCALE } from "@angular/material";
 
 @NgModule({
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: "pl-PL"
+    },
+    {
+      provide: MAT_DATE_LOCALE,
+      useExisting: LOCALE_ID
+    }
+  ],
   declarations: [
     AppComponent,
     TodoComponent,
@@ -32,6 +44,7 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
     BrowserAnimationsModule,
     CustomMaterialModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         component: HomeComponent,
@@ -47,7 +60,6 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
       }
     ])
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,6 +7,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from "@angular/material";
+import { MatFormFieldModule } from "@angular/material";
+
+import { MatDatetimepickerModule } from "@mat-datetimepicker/core";
+import { MatMomentDatetimeModule } from "../provider";
 
 @NgModule({
 imports: [
@@ -17,7 +22,11 @@ imports: [
   MatToolbarModule,
   MatDividerModule,
   MatInputModule,
-  MatIconModule
+  MatIconModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatDatetimepickerModule,
+  MatMomentDatetimeModule
 ],
 exports: [
   MatButtonModule,
@@ -27,7 +36,11 @@ exports: [
   MatToolbarModule,
   MatDividerModule,
   MatInputModule,
-  MatIconModule
+  MatIconModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatDatetimepickerModule,
+  MatMomentDatetimeModule
 ],
 })
 export class CustomMaterialModule { }
