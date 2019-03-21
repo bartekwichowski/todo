@@ -13,7 +13,7 @@ export class NewComponent implements OnInit {
 
   group: FormGroup = new FormGroup({
     task: new FormControl(),
-    dateCreated: new FormControl(),
+    dateCreated: new FormControl()
   });
 
   private todo: Todo = new Todo();
@@ -21,7 +21,6 @@ export class NewComponent implements OnInit {
   constructor(private todoService: TodoService, private router: Router) { }
 
   ngOnInit() {
-    
   }
 
   create() {
