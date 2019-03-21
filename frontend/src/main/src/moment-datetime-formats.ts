@@ -8,6 +8,7 @@ export const MAT_MOMENT_DATETIME_FORMATS: MatDatetimeFormats = {
     datetimeInput: "L LT"
   },
   display: {
+    popupHeaderDateLabel: "",
     dateInput: "l",
     monthInput: "MMMM",
     datetimeInput: "L LT",
