@@ -1,0 +1,14 @@
+runtime: java
+service: backend
+runtime_config:
+  jdk: openjdk8
+#entrypoint: java -jar todo-0.0.1-SNAPSHOT.war
+# use a large instance for springboot
+instance_class: f4
+handlers:
+  - url: /.*
+    script: this field is required, but ignored
+
+endpoints_api_service:
+  name: lunar-pact-235315.appspot.com
+  rollout_strategy: managed
