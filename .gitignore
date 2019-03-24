@@ -69,10 +69,10 @@ yarn-error.log
 # Angular
 
 
-frontend/package-lock.json
-frontend/src/main/node
-frontend/src/main/node-modules
-frontend/target/
+/frontend/package-lock.json
+/frontend/src/main/node
+/frontend/src/main/node-modules
+/frontend/target/
 
 # compiled output
 /dist
