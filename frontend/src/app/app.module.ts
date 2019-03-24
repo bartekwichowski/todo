@@ -44,21 +44,7 @@ import { MAT_DATE_LOCALE } from "@angular/material";
     BrowserAnimationsModule,
     CustomMaterialModule,
     FlexLayoutModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      {
-        component: HomeComponent,
-        path: ''
-      },
-      {
-        component: TodoComponent,
-        path: 'todo/:id'
-      },
-      {
-        component: NewComponent,
-        path: 'new'
-      }
-    ])
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent]
 })
