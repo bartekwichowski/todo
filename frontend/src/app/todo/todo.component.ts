@@ -35,6 +35,6 @@ export class TodoComponent implements OnInit {
   }
 
   edit() {
-    this.router.navigate(['edit', { task: this.todo.task, dateCreated: this.todo.dateCreated}])
+    this.router.navigate(['edit', {id: this.todo.id,  task: this.todo.task, dateCreated: this.todo.dateCreated}])
   }
 }

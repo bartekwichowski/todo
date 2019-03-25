@@ -22,14 +22,9 @@ export class NewComponent implements OnInit {
   constructor(private todoService: TodoService, private router: Router, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
-
+    this.todo.id = +this.route.snapshot.paramMap.get('id');
     this.todo.task = this.route.snapshot.paramMap.get('task');
-    this.todo.dateCreated = this.route.snapshot.paramMap.get('dateCreated');
-    // this.route.snapshot.paramMap.getAll((data: Todo) => {
-    //   console.log(data)
-    //   // this.todo.task = todo.task;
-    //   // this.todo.dateCreated = todo.dateCreated;
-    // });
+    this.todo.dateCreated = new Date(this.route.snapshot.paramMap.get('dateCreated'));
   }
 
   create() {

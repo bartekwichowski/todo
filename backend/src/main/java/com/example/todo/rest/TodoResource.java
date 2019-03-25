@@ -28,7 +28,7 @@ public class TodoResource {
     }
 
     @PostMapping("/todo")
-    public ResponseEntity<TodoDto> create(@RequestBody TodoDto todoDto) {
+    public ResponseEntity<TodoDto> createUpdate(@RequestBody TodoDto todoDto) {
         return new ResponseEntity<>(todoMapper.toDto(todoService.create(todoMapper.toEntity(todoDto))), HttpStatus.OK);
     }
 
