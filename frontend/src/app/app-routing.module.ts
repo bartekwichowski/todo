@@ -7,15 +7,18 @@ import { NewComponent } from './new/new.component';
 const routes: Routes = [
       {
         component: HomeComponent,
-        path: ''
+        path: '',
+        data: { state: 'home' } 
       },
       {
         component: TodoComponent,
-        path: 'todo/:id'
+        path: 'todo/:id',
+        data: { state: 'todo' } 
       },
       {
         component: NewComponent,
-        path: 'new'
+        path: 'new',
+        data: { state: 'new' } 
       }
     ];
 
