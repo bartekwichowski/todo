@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Todo } from '../model/todo';
 import { TodoService } from '../todo.service';
-import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'todo',
@@ -14,7 +14,7 @@ export class TodoComponent implements OnInit {
   private todo: Todo;
 
   constructor(private todoService: TodoService, private route: ActivatedRoute, 
-    private location: Location, private router: Router) {
+    private location: Location) {
     
   }
 
@@ -32,9 +32,5 @@ export class TodoComponent implements OnInit {
 
   back() {
     this.location.back();
-  }
-
-  edit() {
-    this.router.navigate(['edit', {id: this.todo.id,  task: this.todo.task, dateCreated: this.todo.dateCreated}])
   }
 }

@@ -1,5 +1,4 @@
-<menu-bar></menu-bar>
-<div class="task-new">
+<mat-card class="task"> 
   <form [formGroup]="group" class="new-todo"  fxLayout="column" fxFlexAlign="center">
     <mat-form-field class="example-full-width">
       <input name="task" matInput placeholder="What you wann'a do?" autocomplete="off" [(ngModel)]="todo.task" formControlName="task">
@@ -11,8 +10,8 @@
       <input matInput formControlName="dateCreated" [matDatetimepicker]="datetimePicker"  autocomplete="false" [(ngModel)]="todo.dateCreated">
     </mat-form-field>
     <mat-card-actions>
-      <button mat-button (click)="create()">Submit</button>
-      <button mat-button (click)="back()">Back</button>
+      <button mat-button color="primary" (click)="create()">Submit</button>
+      <button mat-button color="primary" (click)="back()">Back</button>
     </mat-card-actions>
   </form>
-</div>
+  </mat-card>

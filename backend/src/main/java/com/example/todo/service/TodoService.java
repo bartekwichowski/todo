@@ -25,6 +25,7 @@ public class TodoService {
 
         Todo existing = todoRepository.getOne(todo.getId());
         existing.setTask(todo.getTask());
+        existing.setDateCreated(todo.getDateCreated());
         return todoRepository.save(existing);
 
     }

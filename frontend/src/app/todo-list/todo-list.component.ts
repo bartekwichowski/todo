@@ -31,6 +31,10 @@ export class TodoListComponent implements OnInit, OnChanges {
       (todos: Todo[])  => this.todos = todos);
   }
 
+  edit(todo: Todo) {
+      this.router.navigate(['edit', {id: todo.id,  task: todo.task, dateCreated: todo.dateCreated}])
+  }
+
   view(id: number) {
     this.router.navigate(['todo/' + id]).then();
   }
