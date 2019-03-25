@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Todo } from '../model/todo';
 import { TodoService } from '../todo.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'todo',
@@ -14,13 +14,12 @@ export class TodoComponent implements OnInit {
   private todo: Todo;
 
   constructor(private todoService: TodoService, private route: ActivatedRoute, 
-    private location: Location) {
+    private location: Location, private router: Router) {
     
   }
 
   loadData(id: number) {
     this.todoService.get(id).subscribe((todo: Todo)  => {
-      console.log(todo);
       this.todo = todo;
     });
   }
@@ -33,5 +32,9 @@ export class TodoComponent implements OnInit {
 
   back() {
     this.location.back();
+  }
+
+  edit() {
+    this.router.navigate(['edit', { task: this.todo.task, dateCreated: this.todo.dateCreated}])
   }
 }

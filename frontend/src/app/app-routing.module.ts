@@ -19,6 +19,11 @@ const routes: Routes = [
         component: NewComponent,
         path: 'new',
         data: { state: 'new' } 
+      },
+      {
+        component: NewComponent,
+        path: 'edit',
+        data : {state: 'edit'}
       }
     ];
 

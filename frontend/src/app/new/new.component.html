@@ -10,6 +10,9 @@
       <mat-datetimepicker #datetimePicker type="datetime" openOnFocus="true" timeInterval="5"></mat-datetimepicker>
       <input matInput formControlName="dateCreated" [matDatetimepicker]="datetimePicker"  autocomplete="false" [(ngModel)]="todo.dateCreated">
     </mat-form-field>
-    <button  type="button" mat-button color="second" (click)="create()">Submit</button>
+    <mat-card-actions>
+      <button mat-button (click)="create()">Submit</button>
+      <button mat-button (click)="back()">Back</button>
+    </mat-card-actions>
   </form>
 </div>
