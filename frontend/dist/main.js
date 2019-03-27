@@ -323,10 +323,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _todo_todo_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./todo/todo.component */ "./src/app/todo/todo.component.ts");
+/* harmony import */ var _new_new_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./new/new.component */ "./src/app/new/new.component.ts");
 
 
 
-var routes = [];
+
+
+
+var routes = [
+    {
+        component: _home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
+        path: '',
+        data: { state: 'home' }
+    },
+    {
+        component: _todo_todo_component__WEBPACK_IMPORTED_MODULE_4__["TodoComponent"],
+        path: 'todo/:id',
+        data: { state: 'todo' }
+    },
+    {
+        component: _new_new_component__WEBPACK_IMPORTED_MODULE_5__["NewComponent"],
+        path: 'new',
+        data: { state: 'new' }
+    },
+    {
+        component: _new_new_component__WEBPACK_IMPORTED_MODULE_5__["NewComponent"],
+        path: 'edit',
+        data: { state: 'edit' }
+    }
+];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
@@ -361,7 +388,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<router-outlet></router-outlet>\n"
+module.exports = "<menu-bar></menu-bar>\n<main [@routerTransition]=\"getState(o)\">\n    <router-outlet #o=\"outlet\"></router-outlet>\n</main>"
 
 /***/ }),
 
@@ -377,15 +404,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _routerTransition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./routerTransition */ "./src/app/routerTransition.ts");
+
 
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'todo-app';
     }
+    AppComponent.prototype.getState = function (outlet) {
+        return outlet.activatedRouteData.state;
+    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
+            animations: [_routerTransition__WEBPACK_IMPORTED_MODULE_2__["routerTransition"]],
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         })
@@ -417,14 +450,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./todo-list/todo-list.component */ "./src/app/todo-list/todo-list.component.ts");
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
-/* harmony import */ var _custom_material_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./custom-material.module */ "./src/app/custom-material.module.ts");
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
-/* harmony import */ var _new_new_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./new/new.component */ "./src/app/new/new.component.ts");
-/* harmony import */ var _menu_bar_menu_bar_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./menu-bar/menu-bar.component */ "./src/app/menu-bar/menu-bar.component.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _custom_material_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./custom-material.module */ "./src/app/custom-material.module.ts");
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
+/* harmony import */ var _new_new_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./new/new.component */ "./src/app/new/new.component.ts");
+/* harmony import */ var _menu_bar_menu_bar_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./menu-bar/menu-bar.component */ "./src/app/menu-bar/menu-bar.component.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 
 
 
@@ -453,7 +484,7 @@ var AppModule = /** @class */ (function () {
                     useValue: "pl-PL"
                 },
                 {
-                    provide: _angular_material__WEBPACK_IMPORTED_MODULE_16__["MAT_DATE_LOCALE"],
+                    provide: _angular_material__WEBPACK_IMPORTED_MODULE_15__["MAT_DATE_LOCALE"],
                     useExisting: _angular_core__WEBPACK_IMPORTED_MODULE_2__["LOCALE_ID"]
                 }
             ],
@@ -462,32 +493,18 @@ var AppModule = /** @class */ (function () {
                 _todo_todo_component__WEBPACK_IMPORTED_MODULE_6__["TodoComponent"],
                 _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_8__["TodoListComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
-                _new_new_component__WEBPACK_IMPORTED_MODULE_14__["NewComponent"],
-                _menu_bar_menu_bar_component__WEBPACK_IMPORTED_MODULE_15__["MenuBarComponent"]
+                _new_new_component__WEBPACK_IMPORTED_MODULE_13__["NewComponent"],
+                _menu_bar_menu_bar_component__WEBPACK_IMPORTED_MODULE_14__["MenuBarComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["BrowserAnimationsModule"],
-                _custom_material_module__WEBPACK_IMPORTED_MODULE_12__["CustomMaterialModule"],
-                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_13__["FlexLayoutModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_10__["RouterModule"].forRoot([
-                    {
-                        component: _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
-                        path: ''
-                    },
-                    {
-                        component: _todo_todo_component__WEBPACK_IMPORTED_MODULE_6__["TodoComponent"],
-                        path: 'todo/:id'
-                    },
-                    {
-                        component: _new_new_component__WEBPACK_IMPORTED_MODULE_14__["NewComponent"],
-                        path: 'new'
-                    }
-                ])
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["BrowserAnimationsModule"],
+                _custom_material_module__WEBPACK_IMPORTED_MODULE_11__["CustomMaterialModule"],
+                _angular_flex_layout__WEBPACK_IMPORTED_MODULE_12__["FlexLayoutModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
@@ -593,7 +610,7 @@ module.exports = ".icon {\n    font-size: 5em;\n    position: fixed;\n    bottom
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<menu-bar></menu-bar>\n<todo-list></todo-list>\n<div class=\"icon\">\n        <mat-icon [inline]=\"true\" color=\"primary\" (click)=\"addNew()\">add_circle</mat-icon>\n</div>"
+module.exports = "<todo-list></todo-list>\n<div class=\"icon\">\n        <mat-icon [inline]=\"true\" color=\"primary\" (click)=\"addNew()\">add_circle</mat-icon>\n</div>"
 
 /***/ }),
 
@@ -720,7 +737,7 @@ var Todo = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".task-new{\n    padding-top:   20px;\n    display: inline-block; \n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmV3L25ldy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0lBQ25CLHFCQUFxQjtBQUN6QiIsImZpbGUiOiJzcmMvYXBwL25ldy9uZXcuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YXNrLW5ld3tcbiAgICBwYWRkaW5nLXRvcDogICAyMHB4O1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jazsgXG59Il19 */"
+module.exports = ".task {\n    margin: 5px;\n    display: inline-block; \n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmV3L25ldy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLHFCQUFxQjtBQUN6QiIsImZpbGUiOiJzcmMvYXBwL25ldy9uZXcuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YXNrIHtcbiAgICBtYXJnaW46IDVweDtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IFxufSJdfQ== */"
 
 /***/ }),
 
@@ -731,7 +748,7 @@ module.exports = ".task-new{\n    padding-top:   20px;\n    display: inline-bloc
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<menu-bar></menu-bar>\n<div class=\"task-new\">\n  <form [formGroup]=\"group\" class=\"new-todo\"  fxLayout=\"column\" fxFlexAlign=\"center\">\n    <mat-form-field class=\"example-full-width\">\n      <input name=\"task\" matInput placeholder=\"What you wann'a do?\" autocomplete=\"off\" [(ngModel)]=\"todo.task\" formControlName=\"task\">\n    </mat-form-field>\n    <mat-form-field>\n      <mat-placeholder>Start DateTime</mat-placeholder>\n      <mat-datetimepicker-toggle [for]=\"datetimePicker\" matSuffix></mat-datetimepicker-toggle>\n      <mat-datetimepicker #datetimePicker type=\"datetime\" openOnFocus=\"true\" timeInterval=\"5\"></mat-datetimepicker>\n      <input matInput formControlName=\"dateCreated\" [matDatetimepicker]=\"datetimePicker\"  autocomplete=\"false\" [(ngModel)]=\"todo.dateCreated\">\n    </mat-form-field>\n    <button  type=\"button\" mat-button color=\"second\" (click)=\"create()\">Submit</button>\n  </form>\n</div>"
+module.exports = "<mat-card class=\"task\"> \n  <form [formGroup]=\"group\" class=\"new-todo\"  fxLayout=\"column\" fxFlexAlign=\"center\">\n    <mat-form-field class=\"example-full-width\">\n      <input name=\"title\" matInput placeholder=\"Optional title\" autocomplete=\"off\" [(ngModel)]=\"todo.title\" formControlName=\"title\">\n    </mat-form-field>\n    <mat-form-field class=\"example-full-width\">\n      <input name=\"task\" matInput placeholder=\"What you wann'a do?\" autocomplete=\"off\" [(ngModel)]=\"todo.task\" formControlName=\"task\">\n    </mat-form-field>\n    <mat-form-field>\n      <mat-placeholder>Start DateTime</mat-placeholder>\n      <mat-datetimepicker-toggle [for]=\"datetimePicker\" matSuffix></mat-datetimepicker-toggle>\n      <mat-datetimepicker #datetimePicker type=\"datetime\" openOnFocus=\"true\" timeInterval=\"5\"></mat-datetimepicker>\n      <input matInput formControlName=\"dateCreated\" [matDatetimepicker]=\"datetimePicker\"  autocomplete=\"false\" [(ngModel)]=\"todo.dateCreated\">\n    </mat-form-field>\n    <mat-card-actions>\n      <button mat-button color=\"primary\" (click)=\"create()\">Submit</button>\n      <button mat-button color=\"primary\" (click)=\"back()\">Back</button>\n    </mat-card-actions>\n  </form>\n  </mat-card>"
 
 /***/ }),
 
@@ -751,6 +768,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _todo_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../todo.service */ "./src/app/todo.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+
 
 
 
@@ -758,20 +777,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var NewComponent = /** @class */ (function () {
-    function NewComponent(todoService, router) {
+    function NewComponent(todoService, router, route, location) {
         this.todoService = todoService;
         this.router = router;
+        this.route = route;
+        this.location = location;
         this.group = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroup"]({
+            title: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](),
             task: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](),
             dateCreated: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]()
         });
         this.todo = new _model_todo__WEBPACK_IMPORTED_MODULE_2__["Todo"]();
     }
     NewComponent.prototype.ngOnInit = function () {
+        var id = this.route.snapshot.paramMap.get('id');
+        if (id) {
+            this.todo.id = +id;
+        }
+        var date = this.route.snapshot.paramMap.get('dateCreated');
+        if (date) {
+            this.todo.dateCreated = new Date(date);
+        }
+        this.todo.task = this.route.snapshot.paramMap.get('task');
+        this.todo.title = this.route.snapshot.paramMap.get('title');
     };
     NewComponent.prototype.create = function () {
         var _this = this;
         this.todoService.create(this.todo).subscribe(function () { _this.router.navigate(['']); });
+    };
+    NewComponent.prototype.back = function () {
+        this.location.back();
     };
     NewComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -779,11 +814,48 @@ var NewComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./new.component.html */ "./src/app/new/new.component.html"),
             styles: [__webpack_require__(/*! ./new.component.css */ "./src/app/new/new.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_todo_service__WEBPACK_IMPORTED_MODULE_3__["TodoService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_todo_service__WEBPACK_IMPORTED_MODULE_3__["TodoService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["Location"]])
     ], NewComponent);
     return NewComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/routerTransition.ts":
+/*!*************************************!*\
+  !*** ./src/app/routerTransition.ts ***!
+  \*************************************/
+/*! exports provided: routerTransition */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerTransition", function() { return routerTransition; });
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+
+var routerTransition = Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["trigger"])('routerTransition', [
+    //   transition('* <=> *', [
+    //     /* order */
+    //     /* 1 */ query(':enter, :leave', style({ position: 'fixed', width:'100%' })
+    //       , { optional: true }),
+    //     /* 2 */ group([  // block executes in parallel
+    //       query(':enter', [
+    //         style({ transform: 'translateX(100%)' }),
+    //         animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
+    //       ], { optional: true }),
+    //       query(':leave', [
+    //         style({ transform: 'translateX(0%)' }),
+    //         animate('0.5s ease-in-out', style({ transform: 'translateX(-100%)' }))
+    //       ], { optional: true }),
+    //     ])
+    //   ])
+    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["transition"])('* => *', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('300ms ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["keyframes"])([
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: 0, offset: 0 }),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ opacity: 1, offset: 1.0 })
+    ])))
+]);
 
 
 /***/ }),
@@ -795,7 +867,7 @@ var NewComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".task {\n  margin: 5px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby1saXN0L3RvZG8tbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztBQUNiIiwiZmlsZSI6InNyYy9hcHAvdG9kby1saXN0L3RvZG8tbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRhc2sge1xuICBtYXJnaW46IDVweDtcbn1cbiJdfQ== */"
+module.exports = ".task {\n  margin-top: 35px;\n  margin-left: 35px;\n}\n\n::ng-deep .mat-card-header-text {\n  /* CSS styles go here */\n  margin: 0px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdG9kby1saXN0L3RvZG8tbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLHVCQUF1QjtFQUN2QixzQkFBc0I7QUFDeEIiLCJmaWxlIjoic3JjL2FwcC90b2RvLWxpc3QvdG9kby1saXN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGFzayB7XG4gIG1hcmdpbi10b3A6IDM1cHg7XG4gIG1hcmdpbi1sZWZ0OiAzNXB4O1xufVxuXG46Om5nLWRlZXAgLm1hdC1jYXJkLWhlYWRlci10ZXh0IHtcbiAgLyogQ1NTIHN0eWxlcyBnbyBoZXJlICovXG4gIG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7XG59Il19 */"
 
 /***/ }),
 
@@ -806,7 +878,7 @@ module.exports = ".task {\n  margin: 5px;\n}\n\n/*# sourceMappingURL=data:applic
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div  fxLayout=\"row wrap\" fxLayout.xs=\"column\" fxLayoutGap=\"8px grid\" fxLayoutAlign=\"left stretch\">\n  <div *ngFor=\"let todo of todos\">\n    <mat-card class=\"task\">\n      <mat-card-header>\n        <mat-card-title>Task {{todo.id}}</mat-card-title>\n      </mat-card-header>\n      <mat-card-content>\n          {{todo.task}}\n      </mat-card-content>\n      <mat-card-content>\n        {{todo.dateCreated}}\n    </mat-card-content>\n      <mat-card-actions>\n        <button mat-button color=\"primary\" (click)=\"view(todo.id)\">VIEW</button>\n        <button mat-button color=\"primary\" (click)=\"delete(todo.id)\">Delete</button>\n      </mat-card-actions>\n    </mat-card>\n  </div>\n</div>\n"
+module.exports = "<div  fxLayout=\"row wrap\" fxLayout.xs=\"column\" fxLayoutGap=\"8px grid\" fxLayoutAlign=\"left stretch\">\n  <div *ngFor=\"let todo of todos\">\n    <mat-card class=\"task\">\n      <mat-card-header>\n        <mat-card-title>{{todo.title}}</mat-card-title>\n      </mat-card-header>\n      <mat-card-content>\n          <mat-card-content>\n              <p>{{todo.task}}</p>\n          </mat-card-content>\n          <mat-card-content>\n            {{todo.dateCreated}}\n        </mat-card-content>\n        <mat-checkbox [(ngModel)]=todo.isDone (change)=update(todo)  name=\"someName\">\n            <label>Done</label>\n        </mat-checkbox>\n          <mat-card-actions>\n            <button mat-button color=\"primary\" (click)=\"view(todo.id)\">View</button>\n            <button mat-button color=\"primary\" (click)=\"edit(todo)\">Edit</button>\n            <button mat-button color=\"primary\" (click)=\"delete(todo.id)\">Delete</button>\n          </mat-card-actions>\n        </mat-card-content>\n    </mat-card>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -847,8 +919,15 @@ var TodoListComponent = /** @class */ (function () {
         var _this = this;
         this.todoService.getAll().subscribe(function (todos) { return _this.todos = todos; });
     };
+    TodoListComponent.prototype.edit = function (todo) {
+        this.router.navigate(['edit', { id: todo.id, title: todo.title, task: todo.task, dateCreated: todo.dateCreated }]);
+    };
     TodoListComponent.prototype.view = function (id) {
         this.router.navigate(['todo/' + id]).then();
+    };
+    TodoListComponent.prototype.update = function (todo) {
+        console.log(todo.isDone);
+        this.todoService.create(todo).subscribe(function () { });
     };
     TodoListComponent.prototype.delete = function (id) {
         var _this = this;
@@ -934,7 +1013,7 @@ module.exports = "card {\n  display: block;\n  padding: 32px;\n  border: 3px sol
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-card class=\"card\" fxLayout=\"column\" fxLayoutGap=\"32px\">\n  <mat-card-header>\n    <div mat-card-avatar class=\"example-header-image\"></div>\n    <mat-card-title>Task {{todo?.id}}</mat-card-title>\n  </mat-card-header>\n  <mat-card-content>\n    {{todo?.task}}\n  </mat-card-content>\n  <mat-card-content>\n      {{todo?.dateCreated}}\n    </mat-card-content>\n  <mat-card-actions>\n    <button mat-button (click)=\"back()\">BACK</button>\n    <button mat-button>EDIT</button>\n  </mat-card-actions>\n</mat-card>\n"
+module.exports = "<div  fxLayout=\"row wrap\" fxLayout.xs=\"column\" fxLayoutGap=\"8px grid\" fxLayoutAlign=\"left stretch\">\n  <mat-card class=\"card\">\n    <mat-card-header>\n      <div mat-card-avatar class=\"example-header-image\"></div>\n      <mat-card-title>Task {{todo?.id}}</mat-card-title>\n    </mat-card-header>\n    <mat-card-content>\n      {{todo?.task}}\n    </mat-card-content>\n    <mat-card-content>\n        {{todo?.dateCreated}}\n      </mat-card-content>\n    <mat-card-actions>\n      <button mat-button (click)=\"back()\">Back</button>\n    </mat-card-actions>\n  </mat-card>\n</div>"
 
 /***/ }),
 
@@ -967,7 +1046,6 @@ var TodoComponent = /** @class */ (function () {
     TodoComponent.prototype.loadData = function (id) {
         var _this = this;
         this.todoService.get(id).subscribe(function (todo) {
-            console.log(todo);
             _this.todo = todo;
         });
     };
@@ -1269,7 +1347,7 @@ var MatMomentDatetimeModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/bartek/IdeaProjects/todo/frontend/src/main/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/bartek/IdeaProjects/todo/frontend/src/main.ts */"./src/main.ts");
 
 
 /***/ })

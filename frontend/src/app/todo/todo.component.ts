@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TodoComponent implements OnInit {
 
-  private todo: Todo;
+  todo: Todo;
 
   constructor(private todoService: TodoService, private route: ActivatedRoute, 
     private location: Location) {

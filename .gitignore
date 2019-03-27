@@ -75,7 +75,7 @@ frontend/src/main/node-modules
 frontend/target/
 
 # compiled output
-/dist
+dist/
 /tmp
 /out-tsc
 

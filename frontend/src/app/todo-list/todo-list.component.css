@@ -1,3 +1,9 @@
 .task {
-  margin: 5px;
+  margin-top: 35px;
+  margin-left: 35px;
+}
+
+::ng-deep .mat-card-header-text {
+  /* CSS styles go here */
+  margin: 0px !important;
 }

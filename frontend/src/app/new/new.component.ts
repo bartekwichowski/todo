@@ -13,11 +13,12 @@ import { Location } from '@angular/common';
 export class NewComponent implements OnInit {
 
   group: FormGroup = new FormGroup({
+    title: new FormControl(),
     task: new FormControl(),
     dateCreated: new FormControl()
   });
 
-  private todo: Todo = new Todo();
+  todo: Todo = new Todo();
 
   constructor(private todoService: TodoService, private router: Router, private route: ActivatedRoute, private location: Location) { }
 
@@ -33,6 +34,7 @@ export class NewComponent implements OnInit {
       this.todo.dateCreated = new Date(date);
     }
     this.todo.task = this.route.snapshot.paramMap.get('task');
+    this.todo.title = this.route.snapshot.paramMap.get('title');
   }
 
   create() {

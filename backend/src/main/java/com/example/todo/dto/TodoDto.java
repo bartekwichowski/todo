@@ -15,6 +15,10 @@ public class TodoDto {
 
     private String task;
 
+    private String title;
+
     private LocalDateTime dateCreated;
+
+    private Boolean isDone;
 
 }

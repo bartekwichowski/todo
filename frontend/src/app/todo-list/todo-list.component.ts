@@ -14,7 +14,7 @@ import { Location } from '@angular/common';
 })
 export class TodoListComponent implements OnInit, OnChanges {
 
-  private todos: Todo[] = [];
+  todos: Todo[] = [];
 
   constructor(private todoService: TodoService, private router: Router, private location: Location) { }
 
@@ -32,11 +32,16 @@ export class TodoListComponent implements OnInit, OnChanges {
   }
 
   edit(todo: Todo) {
-      this.router.navigate(['edit', {id: todo.id,  task: todo.task, dateCreated: todo.dateCreated}])
+      this.router.navigate(['edit', {id: todo.id,  title: todo.title, task: todo.task, dateCreated: todo.dateCreated}])
   }
 
   view(id: number) {
     this.router.navigate(['todo/' + id]).then();
+  }
+
+  update(todo: Todo) {
+    console.log(todo.isDone);
+    this.todoService.create(todo).subscribe(() => {});
   }
 
   delete(id: number) {

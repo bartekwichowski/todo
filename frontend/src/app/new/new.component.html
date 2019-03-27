@@ -1,6 +1,9 @@
 <mat-card class="task"> 
   <form [formGroup]="group" class="new-todo"  fxLayout="column" fxFlexAlign="center">
     <mat-form-field class="example-full-width">
+      <input name="title" matInput placeholder="Optional title" autocomplete="off" [(ngModel)]="todo.title" formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
       <input name="task" matInput placeholder="What you wann'a do?" autocomplete="off" [(ngModel)]="todo.task" formControlName="task">
     </mat-form-field>
     <mat-form-field>
