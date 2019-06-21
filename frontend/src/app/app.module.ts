@@ -14,6 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NewComponent } from './new/new.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { MAT_DATE_LOCALE } from "@angular/material";
+import { TodoViewComponent } from './todo-view/todo-view.component';
 
 @NgModule({
   providers: [
@@ -32,7 +33,8 @@ import { MAT_DATE_LOCALE } from "@angular/material";
     TodoListComponent,
     HomeComponent,
     NewComponent,
-    MenuBarComponent
+    MenuBarComponent,
+    TodoViewComponent
   ],
   imports: [
     BrowserModule,
