@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TodoService } from '../todo.service';
 import { Todo } from '../model/todo';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-todo-view',
