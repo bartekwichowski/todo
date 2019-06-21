@@ -1,6 +1,16 @@
-.task {
+/* .task {
   margin-top: 35px;
   margin-left: 35px;
+} */
+
+.wrapper {
+  margin: 2% !important;
+}
+
+@media screen and (max-width:400px) {
+  .wrapper {
+      margin: 0;
+  }
 }
 
 ::ng-deep .mat-card-header-text {

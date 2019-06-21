@@ -1,6 +1,6 @@
-<div  fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="8px grid" fxLayoutAlign="left stretch">
-  <div *ngFor="let todo of todos">
-    <mat-card class="task">
+<div class="wrapper" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="left"  fxLayoutGap="20px grid" style="margin-right:-20px;">
+    <div fxFlex="calc(25%-20px)" fxFlex.md="33" *ngFor="let todo of todos">
+    <mat-card class="task" style="margin-right: -2%;">
       <mat-card-header>
         <mat-card-title>{{todo.title}}</mat-card-title>
       </mat-card-header>
@@ -9,7 +9,7 @@
               <p>{{todo.task}}</p>
           </mat-card-content>
           <mat-card-content>
-            {{todo.dateCreated}}
+            {{todo.dateCreated | date: 'dd-MM-yyyy hh:mm:ss'}}
         </mat-card-content>
         <mat-checkbox [(ngModel)]=todo.isDone (change)=update(todo)  name="someName">
             <label>Done</label>

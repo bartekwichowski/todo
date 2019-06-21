@@ -11,7 +11,7 @@ const routes: Routes = [
         data: { state: 'home' } 
       },
       {
-        component: TodoComponent,
+        component: NewComponent,
         path: 'todo/:id',
         data: { state: 'todo' } 
       },

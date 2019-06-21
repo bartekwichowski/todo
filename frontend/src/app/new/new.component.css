@@ -1,4 +1,9 @@
-.task {
-    margin: 5px;
-    display: inline-block; 
+.wrapper {
+    margin: 5%;
+}
+
+@media screen and (max-width:400px) {
+    .wrapper {
+        margin: 0;
+    }
 }

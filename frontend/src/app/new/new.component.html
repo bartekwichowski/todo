@@ -1,20 +1,22 @@
-<mat-card class="task"> 
-  <form [formGroup]="group" class="new-todo"  fxLayout="column" fxFlexAlign="center">
-    <mat-form-field class="example-full-width">
-      <input name="title" matInput placeholder="Optional title" autocomplete="off" [(ngModel)]="todo.title" formControlName="title">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input name="task" matInput placeholder="What you wann'a do?" autocomplete="off" [(ngModel)]="todo.task" formControlName="task">
-    </mat-form-field>
-    <mat-form-field>
-      <mat-placeholder>Start DateTime</mat-placeholder>
-      <mat-datetimepicker-toggle [for]="datetimePicker" matSuffix></mat-datetimepicker-toggle>
-      <mat-datetimepicker #datetimePicker type="datetime" openOnFocus="true" timeInterval="5"></mat-datetimepicker>
-      <input matInput formControlName="dateCreated" [matDatetimepicker]="datetimePicker"  autocomplete="false" [(ngModel)]="todo.dateCreated">
-    </mat-form-field>
-    <mat-card-actions>
-      <button mat-button color="primary" (click)="create()">Submit</button>
-      <button mat-button color="primary" (click)="back()">Back</button>
-    </mat-card-actions>
-  </form>
+<div class="wrapper"  fxLayout="column" fxLayoutAlign="center stretch">
+  <mat-card class="task"> 
+    <form [formGroup]="group" fxLayout="column">
+      <mat-form-field class="example-full-width">
+        <input name="title" matInput placeholder="Optional title" autocomplete="off" [(ngModel)]="todo.title" formControlName="title">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input name="task" matInput placeholder="What you wann'a do?" autocomplete="off" [(ngModel)]="todo.task" formControlName="task">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-placeholder>Start DateTime</mat-placeholder>
+        <mat-datetimepicker-toggle [for]="datetimePicker" matSuffix></mat-datetimepicker-toggle>
+        <mat-datetimepicker #datetimePicker type="datetime" openOnFocus="true" timeInterval="5"></mat-datetimepicker>
+        <input matInput formControlName="dateCreated" [matDatetimepicker]="datetimePicker"  autocomplete="false" [(ngModel)]="todo.dateCreated">
+      </mat-form-field>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="create()">Submit</button>
+        <button mat-button color="primary" (click)="back()">Back</button>
+      </mat-card-actions>
+    </form>
   </mat-card>
+</div>

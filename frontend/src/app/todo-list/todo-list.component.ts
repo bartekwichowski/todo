@@ -2,10 +2,7 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { Todo } from '../model/todo'
 import { TodoService } from '../todo.service';
 import { Router } from '@angular/router';
-import { mergeMap } from 'rxjs/internal/operators';
 import { Location } from '@angular/common';
-
-
 
 @Component({
   selector: 'todo-list',

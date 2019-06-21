@@ -9,7 +9,7 @@ import { routerTransition } from './routerTransition';
 })
 export class AppComponent {
   title = 'todo-app';
-  getState(outlet) {
+  getState(outlet: any) {
     return outlet.activatedRouteData.state;
   }
 }
