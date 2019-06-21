@@ -13,7 +13,7 @@ import { CustomMaterialModule } from './custom-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NewComponent } from './new/new.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
-import { MAT_DATE_LOCALE } from "@angular/material";
+import { MAT_DATE_LOCALE } from "@angular/material/core";
 import { TodoViewComponent } from './todo-view/todo-view.component';
 
 @NgModule({
