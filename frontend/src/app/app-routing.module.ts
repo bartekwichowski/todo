@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { TodoComponent } from './todo/todo.component';
 import { NewComponent } from './new/new.component';
+import { TodoViewComponent } from './todo-view/todo-view.component';
 
 const routes: Routes = [
       {
@@ -11,7 +12,7 @@ const routes: Routes = [
         data: { state: 'home' } 
       },
       {
-        component: NewComponent,
+        component: TodoViewComponent,
         path: 'todo/:id',
         data: { state: 'todo' } 
       },

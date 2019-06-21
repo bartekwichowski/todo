@@ -16,22 +16,19 @@ export class TodoViewComponent implements OnInit {
   constructor(private todoService: TodoService, private router: Router, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
-
-    let id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.todo.id = +id;
-    }
-
-    let date = this.route.snapshot.paramMap.get('dateCreated');
-    if (date) {
-      this.todo.dateCreated = new Date(date);
-    }
-    this.todo.task = this.route.snapshot.paramMap.get('task');
-    this.todo.title = this.route.snapshot.paramMap.get('title');
+    this.route.params.subscribe(params => 
+      this.loadData(params['id'])
+    );
   }
 
-  create() {
-    this.todoService.create(this.todo).subscribe(() => { this.router.navigate(['']);});
+  loadData(id: number) {
+    this.todoService.get(id).subscribe((todo: Todo)  => {
+      this.todo = todo;
+    });
+  }
+
+  edit() {
+    this.router.navigate(['edit', {id: this.todo.id,  title: this.todo.title, task: this.todo.task, dateCreated: this.todo.dateCreated}])
   }
 
   back() {

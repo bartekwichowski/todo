@@ -18,16 +18,16 @@ export class TodoComponent implements OnInit {
     
   }
 
-  loadData(id: number) {
-    this.todoService.get(id).subscribe((todo: Todo)  => {
-      this.todo = todo;
-    });
-  }
-
   ngOnInit() {
     this.route.params.subscribe(params => 
       this.loadData(params['id'])
     );
+  }
+
+  loadData(id: number) {
+    this.todoService.get(id).subscribe((todo: Todo)  => {
+      this.todo = todo;
+    });
   }
 
   back() {
