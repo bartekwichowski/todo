@@ -17,16 +17,6 @@ import { MAT_DATE_LOCALE } from "@angular/material/core";
 import { TodoViewComponent } from './todo-view/todo-view.component';
 
 @NgModule({
-  providers: [
-    {
-      provide: LOCALE_ID,
-      useValue: "pl-PL"
-    },
-    {
-      provide: MAT_DATE_LOCALE,
-      useExisting: LOCALE_ID
-    }
-  ],
   declarations: [
     AppComponent,
     TodoComponent,
