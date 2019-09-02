@@ -2,7 +2,7 @@
     margin: 5%;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:200px) {
     .wrapper {
         margin: 0;
     }

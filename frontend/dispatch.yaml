@@ -1,4 +1,0 @@
-dispatch:
-  # Send all work to the one static backend.
-  - url: "*/api/*"
-    service: backend

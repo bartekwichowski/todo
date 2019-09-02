@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Location } from '@angular/common';
 import { Todo } from '../model/todo';
 import { TodoService } from '../todo.service';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'todo',
@@ -11,9 +11,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TodoComponent implements OnInit {
 
+  @Input()
   todo: Todo;
 
-  constructor(private todoService: TodoService, private route: ActivatedRoute, 
+  constructor(private todoService: TodoService, private route: ActivatedRoute, private router: Router,
     private location: Location) {
     
   }
@@ -33,4 +34,25 @@ export class TodoComponent implements OnInit {
   back() {
     this.location.back();
   }
+
+  edit(todo: Todo) {
+    this.router.navigate(['edit', {id: todo.id,  title: todo.title, task: todo.task, dateCreated: todo.dateCreated}])
+  }
+
+  view(id: number) {
+    this.router.navigate(['todo/' + id]).then();
+  }
+
+  update(todo: Todo) {
+    console.log(todo.isDone);
+    this.todoService.create(todo).subscribe(() => {});
+  }
+
+  delete(id: number) {
+    this.todoService.delete(id).subscribe(()  => {
+      console.log('Todo deleted: ', id)
+      // this.loadTodos();
+    });
+  }
+
 }

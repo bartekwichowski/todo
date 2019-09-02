@@ -28,23 +28,4 @@ export class TodoListComponent implements OnInit, OnChanges {
       (todos: Todo[])  => this.todos = todos);
   }
 
-  edit(todo: Todo) {
-      this.router.navigate(['edit', {id: todo.id,  title: todo.title, task: todo.task, dateCreated: todo.dateCreated}])
-  }
-
-  view(id: number) {
-    this.router.navigate(['todo/' + id]).then();
-  }
-
-  update(todo: Todo) {
-    console.log(todo.isDone);
-    this.todoService.create(todo).subscribe(() => {});
-  }
-
-  delete(id: number) {
-    this.todoService.delete(id).subscribe(()  => {
-      this.loadTodos();
-    });
-  }
-
 }
